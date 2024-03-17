@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/spanish-cards/static/css/main.78b281f8.css",
-    "main.js": "/spanish-cards/static/js/main.8990f25c.js",
+    "main.js": "/spanish-cards/static/js/main.bbb3d5b3.js",
     "static/js/453.7264d330.chunk.js": "/spanish-cards/static/js/453.7264d330.chunk.js",
     "index.html": "/spanish-cards/index.html",
     "main.78b281f8.css.map": "/spanish-cards/static/css/main.78b281f8.css.map",
-    "main.8990f25c.js.map": "/spanish-cards/static/js/main.8990f25c.js.map",
+    "main.bbb3d5b3.js.map": "/spanish-cards/static/js/main.bbb3d5b3.js.map",
     "453.7264d330.chunk.js.map": "/spanish-cards/static/js/453.7264d330.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.78b281f8.css",
-    "static/js/main.8990f25c.js"
+    "static/js/main.bbb3d5b3.js"
   ]
 }
