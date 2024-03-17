@@ -1,0 +1,21 @@
+import React from 'react';
+
+export const SpanishFlag = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20">
+        <rect width="30" height="20" fill="#c60b1e"/>
+        <rect width="30" height="10" fill="#ffc400" y="5"/>
+    </svg>
+  
+);
+
+export const EnglishFlag = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" width="30" height="20">
+        <clipPath id="t">
+        <path d="M15,10h15v10zv10h-15zh-15v-10zv-10h15z"/>
+        </clipPath>
+        <path d="M0,0v20h30v-20z" fill="#012169"/>
+        <path d="M0,0 30,20M30,0 0,20" stroke="#fff" stroke-width="4"/>
+        <path d="M0,0 30,20M30,0 0,20" clip-path="url(#t)" stroke="#C8102E" stroke-width="3"/>
+        <path d="M-1 7h15v-8h5v8h15v5h-15v10h-5v-10h-15z" fill="#C8102E" stroke="#FFF" stroke-width="1.5"/>
+  </svg>
+);
