@@ -21,7 +21,7 @@
     { question: 'Adios', answer: 'Buy - formal' },
     { question: 'Me llamo', answer: 'My name' },
     { question: 'Me apellido', answer: 'My surname' },
-    { question: 'En que trabajas', answer: 'Whom do you work?' },
+    { question: 'En que trabajas', answer: 'What is your profession?' },
     { question: 'Donde trabajas', answer: 'Where do you work?' },
     { question: 'Los dos', answer: 'Both' },
     { question: 'Algunas', answer: 'Some' },
@@ -103,10 +103,19 @@
     { question: '<div><b>Pasar</b><p>Paso<br />Pasas<br />Pasa<br />Pasamos<br />Pasáis<br />Pasan</p></div>', answer: 'Spend time' },
     { question: '<div><b>Creer</b><p>Creo<br />Crees<br />Cree<br />Creemos<br />Creéis<br />Creen</p></div>', answer: 'Believe, think' },
     { question: '<div><b>Elegir</b><p>Elijo<br />Eliges<br />Elige<br />Elegimos<br />Elegís<br />Eligen</p></div>', answer: 'Choose' },
-    { question: '<div><b>Tener</b><p>Tengo<br />Tienes<br />Tiene<br />Tenemos<br />Tenéis<br />Tienen</p></div>', answer: 'Have' },
+    
     { question: '<div><b>Ser</b><p>Soy<br />Eres<br />Es<br />Somos<br />Sois<br />Son</p></div>', answer: 'To be' },
     { question: '<div><b>Estar</b><p>Estoy<br />Estás<br />Está<br />Estamos<br />Estáis<br />Están</p></div>', answer: 'To be' },
-    { question: '<div><b>Llegar</b><p>Llego<br />Llegas<br />Llega<br />Llegamos<br />Llegáis<br />Llegan</p></div>', answer: 'Arrive' }
+    { question: '<div><b>Llegar</b><p>Llego<br />Llegas<br />Llega<br />Llegamos<br />Llegáis<br />Llegan</p></div>', answer: 'Arrive' },
+
+    { question: '<div><b>Estar</b><p>Estoy<br />Estás<br />Está<br />Estamos<br />Estáis<br />Están</p></div>', answer: 'To be' },
+    { question: '<div><b>Tener</b><p>Tengo<br />Tienes<br />Tiene<br />Tenemos<br />Tenéis<br />Tienen</p></div>', answer: 'To have' },
+    { question: '<div><b>Decir</b><p>Digo<br />Dices<br />Dice<br />Decimos<br />Decís<br />Dicen</p></div>', answer: 'To say' },
+    { question: '<div><b>Ir</b><p>Voy<br />Vas<br />Va<br />Vamos<br />Vais<br />Van</p></div>', answer: 'To go' },
+    { question: '<div><b>Poder</b><p>Puedo<br />Puedes<br />Puede<br />Podemos<br />Podéis<br />Pueden</p></div>', answer: 'To be able to' },
+    { question: '<div><b>Querer</b><p>Quiero<br />Quieres<br />Quiere<br />Queremos<br />Queréis<br />Quieren</p></div>', answer: 'To want' },
+    { question: '<div><b>Saber</b><p>Sé<br />Sabes<br />Sabe<br />Sabemos<br />Sabéis<br />Saben</p></div>', answer: 'To know' },
+    { question: '<div><b>Visitar</b><p>Visito<br />Visitas<br />Visita<br />Visitamos<br />Visitáis<br />Visitan</p></div>', answer: 'To visit' }
     
   ];
   export default flashcards;
