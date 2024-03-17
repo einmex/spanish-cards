@@ -30,8 +30,14 @@ body {
 .buttons {
   margin-top: 20px;
 }
-.buttons button:nth-child(2) {
+.swipe-right {
   float: right;
+}
+.spanish-side {
+  background-color: lightgoldenrodyellow;
+}
+.english-side {
+  background-color: lightblue;
 }
 
 .flag {

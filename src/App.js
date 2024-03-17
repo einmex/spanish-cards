@@ -1,17 +1,17 @@
 import './App.css';
 import React from 'react';
-import { SpanishFlag, EnglishFlag } from './flags'; // Import the flag components
+import { Flag } from './flags'; // Import the flag components
 import flashcards from './flashcards'; // Import the flashcards array
 
 function Flashcard({ question, answer }) {
   const [showAnswer, setShowAnswer] = React.useState(false);
+  const eng = 'english';
+  const esp = 'spanish'
 
   return (
-    <div className="flashcard" onClick={() => setShowAnswer(!showAnswer)}>
-      <div className="flag">
-        {showAnswer ? <EnglishFlag /> : <SpanishFlag />}
-      </div>
-      <div className="flashcard-content">
+    <div className={`flashcard ${showAnswer ? eng : esp}-side`} onClick={() => setShowAnswer(!showAnswer)}>
+       <Flag origin={showAnswer ? eng : esp} /> 
+       <div className="flashcard-content">
         <div dangerouslySetInnerHTML={{ __html: showAnswer ? answer : question }} /> 
       </div>
     </div>
@@ -20,14 +20,14 @@ function Flashcard({ question, answer }) {
 
 function App() {
   const [currentCardIndex, setCurrentCardIndex] = React.useState(0);
-  const shuffledFlashcards = [...flashcards].sort(() => Math.random() - 0.5);
+  const [shuffledFlashcards, setShuffledFlashcards] = React.useState([]);
 
   // Shuffle flashcards array and pick a random card initially
-  // React.useEffect(() => {
-  //   const shuffledFlashcards = [...flashcards].sort(() => Math.random() - 0.5);
-  //   setCurrentCardIndex(0);
-  //   console.log(shuffledFlashcards)
-  // }, []);
+  React.useEffect(() => {
+    const shuffledFlashcards = [...flashcards].sort(() => Math.random() - 0.5);
+    setShuffledFlashcards(shuffledFlashcards);
+    setCurrentCardIndex(0);
+  }, []);
 
   const handleSwipe = (direction) => {
     if (direction === 'left' && currentCardIndex > 0) {
@@ -40,14 +40,16 @@ function App() {
   return (
     <div>
       <h1>Flashcards App</h1>
-      <Flashcard
-        question={shuffledFlashcards[currentCardIndex].question}
-        answer={shuffledFlashcards[currentCardIndex].answer}
-        onSwipe={handleSwipe}
-      />
+      {shuffledFlashcards.length > 0 && ( // Ensure shuffledFlashcards is not empty before rendering
+        <Flashcard
+          question={shuffledFlashcards[currentCardIndex].question}
+          answer={shuffledFlashcards[currentCardIndex].answer}
+          onSwipe={handleSwipe}
+        />
+      )}
       <div className='buttons'>
-        <button onClick={() => handleSwipe('left')}>Swipe Left</button>
-        <button onClick={() => handleSwipe('right')}>Swipe Right</button>
+        {currentCardIndex > 0 && <button onClick={() => handleSwipe('left')}>Swipe Left</button>}
+        {currentCardIndex < shuffledFlashcards.length -1 && <button className="swipe-right" onClick={() => handleSwipe('right')}>Swipe Right</button>}
       </div>
     </div>
   );
