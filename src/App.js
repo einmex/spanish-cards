@@ -1,16 +1,15 @@
 import './App.css';
 import React from 'react';
 import { Flag } from './flags'; // Import the flag components
+import { lang } from './constants'; // import languages
 import flashcards from './flashcards'; // Import the flashcards array
 
 function Flashcard({ question, answer }) {
   const [showAnswer, setShowAnswer] = React.useState(false);
-  const eng = 'english';
-  const esp = 'spanish'
 
   return (
-    <div className={`flashcard ${showAnswer ? eng : esp}-side`} onClick={() => setShowAnswer(!showAnswer)}>
-       <Flag origin={showAnswer ? eng : esp} /> 
+    <div className={`flashcard ${showAnswer ? lang.eng : lang.esp}-side`} onClick={() => setShowAnswer(!showAnswer)}>
+       <Flag origin={showAnswer ? lang.eng : lang.esp} /> 
        <div className="flashcard-content">
         <div dangerouslySetInnerHTML={{ __html: showAnswer ? answer : question }} /> 
       </div>

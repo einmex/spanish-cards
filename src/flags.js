@@ -1,13 +1,14 @@
 import React from 'react';
+import { lang } from './constants'; // import languages
 
 export const Flag = ({ origin }) => {
     let flag;
-    if (origin == 'spanish') {
+    if (origin == lang.esp) {
         flag = <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20">
             <rect width="30" height="20" fill="#c60b1e"/>
             <rect width="30" height="10" fill="#ffc400" y="5"/>
         </svg>
-    } else if (origin === 'english') {
+    } else if (origin === lang.eng) {
         flag = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" width="30" height="20">
             <clipPath id="t">
             <path d="M15,10h15v10zv10h-15zh-15v-10zv-10h15z"/>
