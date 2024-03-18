@@ -26,7 +26,6 @@
     { question: 'Los dos', answer: 'Both' },
     { question: 'Algunas', answer: 'Some' },
     { question: 'Cosa', answer: 'Thing' },
-    { question: 'Cenar', answer: 'Dinner' },
     { question: 'Ir de compras / hacer la compra', answer: 'Go shopping / do the grocery' },
     { question: 'Clima suave', answer: 'Mild climate' },
     { question: 'Es humedo', answer: 'It\'s wet' },
@@ -115,5 +114,6 @@
     { question: '<b>Saber</b><br />Sé<br />Sabes<br />Sabe<br />Sabemos<br />Sabéis<br />Saben', answer: 'To know' },
     { question: '<b>Visitar</b><br />Visito<br />Visitas<br />Visita<br />Visitamos<br />Visitáis<br />Visitan', answer: 'To visit' },
     { question: '<b>Salir</b><br />Salgo<br />Sales<br />Sale<br />Salimos<br />Salís<br />Salen', answer: 'Leave,<br /> Go out <br />, hangout' },
+    { question: '<b>Cenar</b><br />Ceno<br />Cenas<br />Cena<br />Cenamos<br />Cenáis<br />Cenan', answer: 'To dine' },
   ];
   export default flashcards;
