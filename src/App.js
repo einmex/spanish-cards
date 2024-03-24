@@ -2,16 +2,16 @@ import './App.css';
 import React from 'react';
 import { Flag } from './flags'; // Import the flag components
 import { lang } from './constants'; // import languages
-import flashcards from './flashcards'; // Import the flashcards array
+import flashcards from "./flashcards";
 
-function Flashcard({ question, answer }) {
-  const [showAnswer, setShowAnswer] = React.useState(false);
+function Flashcard({ side1, side2 }) {
+  const [showCardSide, setShowCardSide] = React.useState(false);
 
   return (
-    <div className={`flashcard ${showAnswer ? lang.eng : lang.esp}-side`} onClick={() => setShowAnswer(!showAnswer)}>
-       <Flag origin={showAnswer ? lang.eng : lang.esp} /> 
+    <div className={`flashcard ${showCardSide ? lang.eng : lang.esp}-side`} onClick={() => setShowCardSide(!showCardSide)}>
+       <Flag origin={showCardSide ? lang.eng : lang.esp} /> 
        <div className="flashcard-content">
-        <div dangerouslySetInnerHTML={{ __html: showAnswer ? answer : question }} /> 
+        <div dangerouslySetInnerHTML={{ __html: showCardSide ? side2 : side1 }} /> 
       </div>
     </div>
   );
@@ -38,11 +38,11 @@ function App() {
 
   return (
     <div>
-      <h1>Flashcards App</h1>
+      <h1>Language cards</h1>
       {shuffledFlashcards.length > 0 && ( // Ensure shuffledFlashcards is not empty before rendering
         <Flashcard
-          question={shuffledFlashcards[currentCardIndex].question}
-          answer={shuffledFlashcards[currentCardIndex].answer}
+          side1={shuffledFlashcards[currentCardIndex].side1}
+          side2={shuffledFlashcards[currentCardIndex].side2}
           onSwipe={handleSwipe}
         />
       )}
