@@ -3,7 +3,7 @@ import { lang } from './constants'; // import languages
 
 export const Flag = ({ origin }) => {
     let flag;
-    if (origin == lang.esp) {
+    if (origin === lang.esp) {
         flag = <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20">
             <rect width="30" height="20" fill="#c60b1e"/>
             <rect width="30" height="10" fill="#ffc400" y="5"/>
